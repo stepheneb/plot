@@ -1,0 +1,13 @@
+<div id="myplot"></div>
+<div>
+This project: <a href="https://github.com/stepheneb/plot">stepheneb/plot</a>,
+uses: <a href="https://github.com/simonw/download-esm">simonw/download-esm</a>
+</div>
+<script type="module">
+import * as Plot from "./modules/observablehq-plot-0-6-6.js";
+const plot = Plot.rectY(
+    {length: 10000}, Plot.binX({y: "count"}, {x: Math.random})
+).plot();
+const div = document.querySelector("#myplot");
+div.append(plot);
+</script>
